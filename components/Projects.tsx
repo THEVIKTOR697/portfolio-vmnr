@@ -19,10 +19,17 @@ const projects = [
         url: "https://www.facebook.com/profile.php?id=61586879647366"
     },
     {
-        title: "Virtual Assistant",
+        title: "Chad Virtual Assistant",
         desc: "Chatbot for dental offices.",
         tech: ["Fast API", "Twilio", "OpenAI"],
         image: "/img/spoti.png",
+        url: "https://www.google.com"
+    },
+    {
+        title: "Nocal App",
+        desc: "Nominal interest calculator.",
+        tech: ["Kotlin", "Java", "Android Studio"],
+        image: "/img/cal.png",
         url: "https://www.google.com"
     },
 ];
@@ -85,33 +92,3 @@ export default function Projects() {
         </section>
     );
 }
-// export default function Projects() {
-//     return (
-//         <section id="projects" className="scroll-mt-24">
-//             <h2 className="text-lg font-semibold text-slate-200 mb-10">
-//                 Projects
-//             </h2>
-//
-//             <div className="space-y-10">
-//
-//                 <div className="group">
-//                     <h3 className="text-slate-200 group-hover:text-slate-100">
-//                         Sistema de Facturación
-//                     </h3>
-//                     <p className="text-slate-400 mt-2">
-//                         Generación automática de facturas con integración de APIs.
-//                     </p>
-//                 </div>
-//
-//                 <div className="group">
-//                     <h3 className="text-slate-200 group-hover:text-slate-100">
-//                         Automatización con n8n
-//                     </h3>
-//                     <p className="text-slate-400 mt-2">
-//                         Flujos automatizados con IA para procesamiento de datos.
-//                     </p>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }

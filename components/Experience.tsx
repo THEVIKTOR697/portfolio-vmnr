@@ -3,15 +3,15 @@
 import {motion} from "framer-motion";
 
 const desc1= "Backend developer supporting legacy applications for National Healthcare Association developing APIs, " +
-            "webhooks implementation, pipeline maintainance, release deployments and incident support."
+            "webhooks implementation, pipeline maintainance, deployments release and incident support."
 const desc2 = "Backend developer working on migration of legacy applications by developing new API's using " +
             "Java, SpringBoot, AWS. Involved with Continuos Integration/Continuous Deployment methods."
 const desc3 = "Application development using AUTODESK REVIT API and C# for" +
-            " structural modeling platform for monetary materials estimates QTOs"
+            " structural modeling platform for monetary materials estimates QTOs."
 const desc4 = "Web services analysis and massive orders monitoring for SKY TV America. Reports for code " +
             "improvements and solutions implementation."
 const desc5 = "Corporate website development and check-in system maintainance. Support to company IT operations including internal network\n" +
-            "structured cabling, workstations and videosurveillance setup"
+            "structured cabling, workstations and video surveillance setup."
 
 const jobs = [
     {
@@ -77,7 +77,7 @@ export default function Experience() {
                             {job.title}
                         </h3>
 
-                        <ul className="mt-3 text-gray-400 list-disc list-inside space-y-1">
+                        <ul className="mt-3 text-gray-400 list-disc list-inside space-y-1 text-justify">
                             {job.desc.map((d, idx) => (
                                 <li key={idx} className="group-hover:text-gray-300 transition">
                                     {typeof d === "string" && d.startsWith("http") ? (

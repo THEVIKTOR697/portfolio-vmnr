@@ -71,8 +71,8 @@ export default function Sidebar() {
 
             {/* SOCIAL */}
             <div className="flex gap-4 text-slate-400 text-sm">
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
+                <a href="https://github.com/THEVIKTOR697">GitHub</a>
+                <a href="https://www.linkedin.com/in/vmanuelnavarreter">LinkedIn</a>
             </div>
         </div>
     );
