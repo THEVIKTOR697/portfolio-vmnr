@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const sections = [
-    { id: "about", label: "About" },
+    { id: "about", label: "About Me" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
 ];
@@ -13,10 +13,13 @@ export default function Sidebar() {
     const active = useScrollSpy(sections.map((s) => s.id));
 
     return (
+        // <div className="w-[420px] px-16 py-20 hidden lg:flex flex-col justify-between">
         <div className="
-          fixed left-0 top-0 h-screen
+          fixed top-10 left-60
+          h-screen
           w-[420px]
-          px-16 py-20
+          ml-10
+          px-10 py-20
           hidden lg:flex flex-col justify-between
         ">
             {/* TOP */}
@@ -25,12 +28,13 @@ export default function Sidebar() {
                     Víctor Navarrete
                 </h1>
 
-                <h2 className="text-slate-300 mt-3">
-                    Backend Engineer
+                <h2 className="text-slate-300 mt-3 text-justify">
+                    Geek developer passionate about technology and sports, always seeking to create, improve and overcome new challenges.
                 </h2>
-
+                <h3 className="text-slate-300 mt-3 text-justify">
+                    Specializing in scalable backend architecture and cloud infrastructure.
+                </h3>
                 <p className="mt-4 text-slate-400 max-w-xs leading-relaxed">
-                    Construyo soluciones backend y automatizaciones escalables.
                 </p>
 
                 {/* NAV */}

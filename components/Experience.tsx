@@ -2,26 +2,47 @@
 
 import {motion} from "framer-motion";
 
+const desc1= "Backend developer supporting legacy applications for National Healthcare Association developing APIs, " +
+            "webhooks implementation, pipeline maintainance, release deployments and incident support."
+const desc2 = "Backend developer working on migration of legacy applications by developing new API's using " +
+            "Java, SpringBoot, AWS. Involved with Continuos Integration/Continuous Deployment methods."
+const desc3 = "Application development using AUTODESK REVIT API and C# for" +
+            " structural modeling platform for monetary materials estimates QTOs"
+const desc4 = "Web services analysis and massive orders monitoring for SKY TV America. Reports for code " +
+            "improvements and solutions implementation."
+const desc5 = "Corporate website development and check-in system maintainance. Support to company IT operations including internal network\n" +
+            "structured cabling, workstations and videosurveillance setup"
+
 const jobs = [
     {
-        year: "2024 — Presente",
-        title: "Backend Developer · Empresa Actual",
-        desc: [
-            "Desarrollo de APIs con Python y FastAPI",
-            "Integración con múltiples servicios",
-            "Automatización de procesos",
-        ],
-        tech: ["Python", "FastAPI", "PostgreSQL", "Docker"],
+        year: "2023 — Present",
+        title: "Software Engineer III · People Thrust",
+        desc: [desc1, "https://www.nhanow.com/"],
+        tech: ["Python", "AWS", "PostgreSQL", "Docker", "Turbogears"],
     },
     {
-        year: "2022 — 2024",
-        title: "Backend Developer · Empresa Anterior",
-        desc: [
-            "Construcción de microservicios",
-            "Autenticación y autorización",
-            "Trabajo con Scrum",
-        ],
-        tech: ["Django", "Redis", "Docker"],
+        year: "2021 — 2023",
+        title: "Software Engineer · Tata Consultancy Services",
+        desc: [desc2, "https://www.libertymutual.com/"],
+        tech: ["AWS", "SpringBoot", "Java", "Docker", "MSSQL"],
+    },
+    {
+        year: "2021 — 2021",
+        title: "BIM Developer · SEDENA",
+        desc: [desc3, "https://www.gob.mx/defensa"],
+        tech: ["C#", ".NET", "MSSQL", "Revit"],
+    },
+    {
+        year: "2018 — 2019",
+        title: "SOA Engineer · BWR Mexico",
+        desc: [desc4, "https://www.bwr.mx/"],
+        tech: ["Oracle Suite", "Java", "SOAP"],
+    },
+        {
+        year: "2015 — 2018",
+        title: "Systems Technician · DIFASIGN",
+        desc: [desc5],
+        tech: ["Java", "MSSQL", "PHP", "HTML", "CSS"],
     },
 ];
 
@@ -29,7 +50,7 @@ export default function Experience() {
     return (
         <section id="experience" className="max-w-3xl">
             <h2 className="text-2xl font-bold text-gray-100 mb-10">
-                Experiencia
+                Professional Experience
             </h2>
 
             <div className="space-y-8 border-l border-gray-800 pl-6">
@@ -59,7 +80,17 @@ export default function Experience() {
                         <ul className="mt-3 text-gray-400 list-disc list-inside space-y-1">
                             {job.desc.map((d, idx) => (
                                 <li key={idx} className="group-hover:text-gray-300 transition">
-                                    {d}
+                                    {typeof d === "string" && d.startsWith("http") ? (
+                                        <a
+                                            href={d}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-green-400 hover:underline"
+                                        >
+                                            {d}
+                                        </a>
+                                    ) : (d)
+                                    }
                                 </li>
                             ))}
                         </ul>
@@ -69,11 +100,8 @@ export default function Experience() {
                             {job.tech.map((t, idx) => (
                                 <span
                                     key={idx}
-                                    className="text-xs border border-green-400/40 text-green-400 px-2 py-1 rounded-full
-                             group-hover:border-green-400 group-hover:bg-green-400/10 transition"
-                                >
-                  {t}
-                </span>
+                                    className="text-xs border border-green-400/40 text-green-400 px-2 py-1 rounded-full group-hover:border-green-400 group-hover:bg-green-400/10 transition">{t}
+                                </span>
                             ))}
                         </div>
                     </motion.div>
