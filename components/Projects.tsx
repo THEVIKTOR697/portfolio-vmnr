@@ -5,6 +5,14 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "FIVO Developing Technologies",
+        desc: "Software Consulting Services. Secure Data and Hardware Destruction.",
+        tech: ["Software Architecture", "Web/Mobile Development", "Cloud Services",
+            "Comprehensive IT Asset Audit", "Data Sanitization", "Hardware Destruction"],
+        image: "/img/fivo.png",
+        url: "https://www.facebook.com/FIVODT"
+    },
+    {
         title: "SICOE",
         desc: "Academic Control System for school registration, manage schedules, setup exams and generate reports.",
         tech: ["Asyncio", "Tailwind", "Next.js", "Fast API", "Celery(Redis)"],
